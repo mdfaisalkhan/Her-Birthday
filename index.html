@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Nausin ❤️</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<section>
+    
+        <canvas id="birthdayCanvas"></canvas>
+<!-- Hero Section -->
+<section class="hero">
+    
+    <!-- Background Video -->
+    <video autoplay muted loop playsinline class="bg-video">
+        <source src="Videos/BGvideo.mp4" type="video/mp4">
+    </video>
+
+    <!-- Overlay -->
+    <div class="video-overlay"></div>
+
+    <!-- Content -->
+    <div class="hero-content">
+        <h1 id="typeText"></h1>
+        <p class="subtitle">You are the most special person in my life.💖</p>
+    
+        <button id="scrollBtn">Click Here ❤️</button>
+    </div>
+
+</section>
+
+<!-- Background Music -->
+<audio id="bg-music" autoplay loop>
+    <source src="song2.mp3" type="audio/mp3">
+</audio>
+
+<!-- Gallery -->
+<section class="gallery" id="gallery">
+
+    <div class="card">
+        <img src="Images/img 1.jpg" alt="Memory 1">
+        <div class="overlay">
+            Tumhari muskaan meri duniya hai,<br>
+            Tum saath ho to har khushi apni lagti hai ❤️
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="Images/img 2.jpg" alt="Memory 2">
+        <div class="overlay">
+            Dua hai meri rab se aaj ke din,<br>
+            Tumhari har khushi kabhi kam na ho ✨
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="Images/img 10.jpg" alt="Memory 3">
+        <div class="overlay">
+            Tum ho to zindagi khoobsurat lagti hai,<br>
+            Tumhare bina sab adhoora sa lagta hai 💖
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="Images/img 8.jpg" alt="Memory 4">
+        <div class="overlay">
+            Tumhari hasi meri sabse badi khushi hai,<br>
+            Rab kare ye hamesha aise hi rahe 🌸
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="Images/img 7.jpg" alt="Memory 5">
+        <div class="overlay">
+            Rab se bas ye dua hai,<br>
+            Tum hamesha meri zindagi me raho ❤️
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="Images/img 6.jpg" alt="Memory 6">
+        <div class="overlay">
+            Tum meri dua ho, meri khushi ho,<br>
+            Meri zindagi ki sabse pyari wajah ho 💫
+        </div>
+    </div>
+
+</section>
+
+<!-- Video Section -->
+<section class="video-section">
+    <h2 class="herMoment">Special Moments</h2>
+
+    <div class="video-container">
+
+        <video class="memoryVideo" controls>
+            <source src="Videos/video 2.mp4" type="video/mp4">
+        </video>
+        
+        <!-- <video class="memoryVideo" controls>
+            <source src="Videos/video 1.mp4" type="video/mp4">
+        </video> -->
+        
+        <video class="memoryVideo" controls>
+            <source src="Videos/video 3.mp4" type="video/mp4">
+        </video>
+
+    </div>
+
+</section>
+
+<!-- Proposal Section -->
+<section class="proposal">
+    <h2>Kya tum mujhe abhi bhi pasand karti ho? 💖</h2>
+
+    <div class="btn-container" id="btnBox">
+        <button id="yes">YES ❤️</button>
+        <button id="no">NO 😜</button>
+    </div>
+</section>
+
+<canvas id="confettiCanvas"></canvas>
+
+<!-- Popup -->
+<section>
+<div id="popup">
+    <div class="popup-box">
+        <h2 >I Knew it 😊</h2>
+        
+        <button onclick="closePopup()">Close</button>
+    </div>
+</div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,326 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body{
+    background: linear-gradient(135deg,#ff9a9e,#fad0c4);
+    overflow-x:hidden;
+    text-align:center;
+    color:white;
+}
+#birthdayCanvas{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    z-index:-1;
+}
+/* Canvas */
+#birthdayCanvas{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    z-index:-1;
+}
+
+/* Hero */
+.hero{
+    position:relative;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+}
+
+/* 🎬 Background Video */
+.bg-video{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    width:100%;
+    height:100%;
+    object-fit:cover; /* keeps 16:9 cinematic feel */
+    z-index:-2;
+}
+
+/* Dark Overlay */
+.video-overlay{
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:rgba(0, 0, 0, 0.347); /* opacity control */
+    z-index:-1;
+    
+}
+
+
+/* Content Above Video */
+.hero-content{
+    text-align:center;
+    color:white;
+}
+#scrollBtn{
+    margin-top:25px;
+    padding:12px 30px;
+    font-size:1rem;
+    border:none;
+    border-radius:30px;
+    background:#ff4d6d;
+    color:white;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+#scrollBtn:hover{
+    transform:scale(1.1);
+}
+
+/* Gallery animation start hidden */
+.card{
+    position:relative;
+    width:280px;
+    overflow:hidden;
+    border-radius:15px;
+    opacity:0;
+    transform:translateY(50px);
+    transition:0.8s;
+}
+
+.overlay{
+    font-size:15px;
+    line-height:1.4;
+    text-align:center;
+    padding:10px;
+}
+
+@media (max-width:768px){
+    .overlay{
+        font-size:13px;
+    }
+}
+/* When visible */
+.card.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+.hero h1{
+    font-size:3rem;
+    letter-spacing:2px;
+}
+
+/* Blinking cursor effect */
+.hero h1::after{
+    content:"|";
+    animation:blink 1s infinite;
+}
+
+@keyframes blink{
+    0%{opacity:1;}
+    50%{opacity:0;}
+    100%{opacity:1;}
+}
+
+/* Gallery */
+.gallery{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    padding:50px 20px;
+    gap:20px;
+}
+
+
+.card {
+    position: relative;
+    width: 170px;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.card img{
+    width:100%;
+    display:block;
+    transition:0.5s;
+}
+
+.overlay{
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.7);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    opacity:0;
+    transition:0.5s;
+    padding:20px;
+}
+
+.card:hover img{
+    transform:scale(1.1);
+}
+
+.card:hover .overlay{
+    opacity:1;
+}
+
+@media (max-width:400px){
+
+    .gallery{
+        display:grid;
+        grid-template-columns:1fr 1fr; /* 2 photos per row */
+        gap:10px;
+        padding:20px;
+    }
+    
+    .card{
+        width:100%;
+    }
+    
+    .card img{
+        width:100%;
+    }
+    
+    }
+/* Video */
+.video-section{
+    padding:50px 20px;
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    background-color: rgba(255, 16, 16, 0.199);
+    
+}
+.herMoment{
+    margin-bottom: 20px;
+    font-size: 30px;
+    color: white;
+}
+.video-container{
+    display:flex;
+    flex-wrap:wrap;
+    gap:20px;
+    justify-content:center;
+}
+
+.video-container video{
+    width:300px;
+    border-radius:12px;
+}
+
+
+/* Proposal */
+
+#confettiCanvas{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    pointer-events:none;
+    z-index:999;
+}
+
+.proposal{
+    text-align:center;
+    padding:80px 20px;
+    background: linear-gradient(135deg,#e36378,#df6497,#ec957a);
+    position:relative;
+    overflow:hidden;
+    }
+    
+    .btn-container{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    margin-top:30px;
+    }
+    
+    button{
+    padding:12px 25px;
+    font-size:18px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    transition:0.3s;
+    }
+    
+    #yes{
+    background:#ff2f55;
+    color:white;
+    }
+    
+    #no{
+    background:#444;
+    color:white;
+    }
+    
+    button:hover{
+    transform:scale(1.1);
+    }
+    
+    /* canvas */
+    canvas{
+    position:fixed;
+    top:0;
+    left:0;
+    pointer-events:none;
+    }
+    
+    /* popup */
+    #popup{
+        position:fixed;
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+        background:rgba(0,0,0,0.7);
+        display:none;
+        justify-content:center;
+        align-items:center;
+        z-index:1000;
+    }
+   
+    
+    .popup-box{
+        background:white;
+        padding:30px;
+        border-radius:10px;
+        text-align:center;
+        animation:pop 0.5s;
+        color:black;   /* text black */
+    }
+    
+    .popupmsg{
+        color:black;
+    }
+    
+    @keyframes pop{
+    0%{transform:scale(0)}
+    100%{transform:scale(1)}
+    }
+
+
+
+/* Mobile */
+@media(max-width:768px){
+    .hero h1{
+        font-size:2rem;
+    }
+    video{
+        width:95%;
+    }
+}
